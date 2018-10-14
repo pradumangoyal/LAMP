@@ -14,7 +14,10 @@ apt-get install php-dev libmcrypt-dev gcc make autoconf libc-dev pkg-config -y
 pecl install mcrypt-1.0.1
 "extension=mcrypt.so" | sudo tee -a /etc/php/7.2/apache2/conf.d/mcrypt.ini
 service apache2 restart
-apt-get install php libapache2-mod-php php-mcrypt php-mysql -y
+aptitude purge `dpkg -l | grep php| awk '{print $2}' |tr "\n" " "`
+ add-apt-repository ppa:ondrej/php
+ apt-get update
+apt-get install php libapache2-mod-php php7.1-mcrypt php-mysql -y
 echo "<IfModule mod_dir.c>
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>" > /etc/apache2/mods-enabled/dir.conf
