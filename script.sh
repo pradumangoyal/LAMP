@@ -23,7 +23,6 @@ echo "<IfModule mod_dir.c>
 </IfModule>" > /etc/apache2/mods-enabled/dir.conf
 systemctl restart apache2
 systemctl status apache2
-echo "<?php echo \"We Welcome you to IMG Workshop'18 @ LHC 002 10:00 AM, 14 Oct, 2018 <3 \n Keep Learning! Keep Growing\";?>" > /var/www/html/welcome.php
+echo "<?php echo \"We Welcome you to IMG Workshop'19 @ LHC 002 10:30 AM, 13 Oct, 2019 <3 \n Keep Learning! Keep Growing\";?>" > /var/www/html/welcome.php
 echo "Go to localhost//welcome.php to see it working!"
 echo "All The Best!"
-
