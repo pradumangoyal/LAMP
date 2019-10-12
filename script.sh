@@ -1,5 +1,4 @@
 apt-get install git
-apt-get install sublime-text -y
 apt install google-chrome-stable -y
 apt-get install apache2 -y
 apache2ctl configtest
